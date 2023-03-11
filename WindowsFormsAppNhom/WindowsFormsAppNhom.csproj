@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E5EE9B9F-4A94-4B40-9539-E2B7B66ADE6A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsAppNhom</RootNamespace>
+    <AssemblyName>WindowsFormsAppNhom</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="banSp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="banSp.Designer.cs">
+      <DependentUpon>banSp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dangNhap.Designer.cs">
+      <DependentUpon>dangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dkTK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dkTK.Designer.cs">
+      <DependentUpon>dkTK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="muaSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="muaSanPham.Designer.cs">
+      <DependentUpon>muaSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="qlDoiTac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="qlDoiTac.Designer.cs">
+      <DependentUpon>qlDoiTac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="qlDT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="qlDT.Designer.cs">
+      <DependentUpon>qlDT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="qlHDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="qlHDon.Designer.cs">
+      <DependentUpon>qlHDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="qlNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="qlNV.Designer.cs">
+      <DependentUpon>qlNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="qlSP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="qlSP.Designer.cs">
+      <DependentUpon>qlSP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="qlTKCaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="qlTKCaNhan.Designer.cs">
+      <DependentUpon>qlTKCaNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="xemSP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="xemSP.Designer.cs">
+      <DependentUpon>xemSP.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="qlDoiTac.resx">
+      <DependentUpon>qlDoiTac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="qlTKCaNhan.resx">
+      <DependentUpon>qlTKCaNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
