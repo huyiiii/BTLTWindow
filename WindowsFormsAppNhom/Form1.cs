@@ -19,7 +19,14 @@ namespace WindowsFormsAppNhom
 
         private void Form1_Load(object sender, EventArgs e)
         {
+<<<<<<< Updated upstream
 
+=======
+            this.Hide();
+            banSp banSp = new banSp();
+            banSp.ShowDialog();
+            this.Close();
+>>>>>>> Stashed changes
         }
     }
 }
