@@ -42,6 +42,7 @@
             this.txtDKSDT = new System.Windows.Forms.TextBox();
             this.txtDKMK = new System.Windows.Forms.TextBox();
             this.txtDKXN = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblDK
@@ -172,11 +173,20 @@
             this.txtDKXN.Size = new System.Drawing.Size(145, 22);
             this.txtDKXN.TabIndex = 14;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(37, 284);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 16);
+            this.label1.TabIndex = 15;
+            // 
             // dkTK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(655, 448);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtDKXN);
             this.Controls.Add(this.txtDKMK);
             this.Controls.Add(this.txtDKSDT);
@@ -216,5 +226,6 @@
         private System.Windows.Forms.TextBox txtDKSDT;
         private System.Windows.Forms.TextBox txtDKMK;
         private System.Windows.Forms.TextBox txtDKXN;
+        private System.Windows.Forms.Label label1;
     }
 }

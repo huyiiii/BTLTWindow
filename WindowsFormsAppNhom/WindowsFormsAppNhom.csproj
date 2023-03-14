@@ -123,6 +123,9 @@
     <EmbeddedResource Include="banSp.resx">
       <DependentUpon>banSp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="dangNhap.resx">
+      <DependentUpon>dangNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="dkTK.resx">
       <DependentUpon>dkTK.cs</DependentUpon>
     </EmbeddedResource>

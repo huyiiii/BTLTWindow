@@ -24,7 +24,7 @@ namespace WindowsFormsAppNhom
 
         private void cbDKHienMK_CheckedChanged(object sender, EventArgs e)
         {
-            if(cbDKHienMK.Checked)
+            if (cbDKHienMK.Checked)
             {
                 txtDKMK.PasswordChar = '\0';
                 txtDKXN.PasswordChar = '\0';
@@ -46,21 +46,23 @@ namespace WindowsFormsAppNhom
 
         private void bntDKDK_Click(object sender, EventArgs e)
         {
-            if(txtDKHo.Text == "")
+            if (txtDKHo.Text == "")
             {
                 txtDKHo.Focus();
             }
             else if (txtDKTen.Text == "")
             {
-               txtDKTen.Focus();
+                txtDKTen.Focus();
             }
             else if (txtDKSDT.Text == "")
             {
-                txtDKSDT.Focus();   
-            }else if (txtDKMK.Text == "")
+                txtDKSDT.Focus();
+            }
+            else if (txtDKMK.Text == "")
             {
                 txtDKMK.Focus();
-            }else if(txtDKXN.Text == "")
+            }
+            else if (txtDKXN.Text == "")
             {
                 txtDKXN.Focus();
             }
@@ -69,24 +71,79 @@ namespace WindowsFormsAppNhom
                 try
                 {
                     int sdt = int.Parse(txtDKSDT.Text);
-                    if(sdt.ToString().Length > 11|| sdt.ToString().Length < 10)
+                    if (txtDKMK.Text == txtDKXN.Text)
+                    {
+                        if (sdt.ToString().Length > 11 || sdt.ToString().Length < 10)
+                        {
+                            txtDKSDT.Text = "";
+                            txtDKMK.Focus();
+                        }
+                        if (txtDKMK.Text != txtDKXN.Text)
+                        {
+                            txtDKXN.Text = "";
+                            txtDKMK.Text = "";
+                            txtDKMK.Focus();
+                        }
+                        DialogResult result = MessageBox.Show(
+                            "Bạn có muốn đăng ký tài khoản không.",
+                            "Thông báo",
+                            MessageBoxButtons.YesNo,
+                            MessageBoxIcon.Question
+                            );
+                        if (result == DialogResult.Yes)
+                        {
+                            //cập nhật csdl
+                            //đóng form
+                            //mở lại form trước đó
+                        }
+                        else
+                        {
+                            //đóng form
+                            this.Close();
+                        }
+                    }
+                    else
+                    {
+                        DialogResult result = MessageBox.Show(
+                            "Mật khẩu không khớp.",
+                            "Warning",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Warning
+                            );
+                        txtDKMK.Text = "";
+                        txtDKXN.Text = "";
+                        txtDKMK.Focus();
+                    }
+
+                }
+                catch
+                {
+                    DialogResult result1 = MessageBox.Show(
+                        "Số điện thoại không hợp lệ.",
+                        "Warning",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning
+                        );
+                    if (result1 == DialogResult.OK)
                     {
                         txtDKSDT.Text = "";
-                        txtDKMK.Focus();
+                        txtDKSDT.Focus();
                     }
                     if (txtDKMK.Text != txtDKXN.Text)
                     {
-                        txtDKXN.Text = "";
-                        txtDKMK.Text = "";
-                        txtDKMK.Focus();
-                    }
-                }catch {
-                    txtDKSDT.Text = "";
-                    txtDKSDT.Focus();
-                    if (txtDKMK.Text != txtDKXN.Text)
-                    {
-                        txtDKXN.Text = "";
-                        txtDKMK.Text = "";
+                        DialogResult result = MessageBox.Show(
+                            "Mật khẩu không khớp.",
+                            "Warning",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Warning
+                            );
+                        if (result == DialogResult.OK)
+                        {
+                            txtDKMK.Text = "";
+                            txtDKXN.Text = "";
+                            txtDKMK.Focus();
+                        }
+
                     }
                 }
             }
