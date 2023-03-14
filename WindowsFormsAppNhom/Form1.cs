@@ -20,7 +20,7 @@ namespace WindowsFormsAppNhom
         private void Form1_Load(object sender, EventArgs e)
         {
             this.Hide();
-            dkTK dkTK = new dkTK();
+            qlDoiTac dkTK = new qlDoiTac();
             dkTK.ShowDialog(this);
             this.Close();
         }
