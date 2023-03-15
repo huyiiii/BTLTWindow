@@ -129,6 +129,7 @@ namespace WindowsFormsAppNhom
             // 
             this.textBox1.Location = new System.Drawing.Point(134, 74);
             this.textBox1.Name = "textBox1";
+            this.textBox1.PasswordChar = '*';
             this.textBox1.Size = new System.Drawing.Size(289, 22);
             this.textBox1.TabIndex = 4;
             // 
@@ -163,14 +164,13 @@ namespace WindowsFormsAppNhom
             // ChkShow
             // 
             this.ChkShow.AutoSize = true;
-            this.ChkShow.Checked = true;
-            this.ChkShow.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ChkShow.Location = new System.Drawing.Point(134, 157);
             this.ChkShow.Name = "ChkShow";
             this.ChkShow.Size = new System.Drawing.Size(133, 20);
             this.ChkShow.TabIndex = 10;
             this.ChkShow.Text = "Hiển thị mật khẩu ";
             this.ChkShow.UseVisualStyleBackColor = true;
+            this.ChkShow.CheckedChanged += new System.EventHandler(this.ChkShow_CheckedChanged);
             // 
             // dangNhap
             // 
@@ -188,7 +188,9 @@ namespace WindowsFormsAppNhom
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "dangNhap";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
+            this.Load += new System.EventHandler(this.dangNhap_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

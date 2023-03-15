@@ -16,5 +16,15 @@ namespace WindowsFormsAppNhom
         {
             InitializeComponent();
         }
+
+        private void dangNhap_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ChkShow_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
