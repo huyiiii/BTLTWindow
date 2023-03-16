@@ -30,6 +30,9 @@
         {
             this.tcTKcn = new System.Windows.Forms.TabControl();
             this.tpTTCaNhan = new System.Windows.Forms.TabPage();
+            this.bntTKXN = new System.Windows.Forms.Button();
+            this.txtTKTen = new System.Windows.Forms.TextBox();
+            this.txtTKHo = new System.Windows.Forms.TextBox();
             this.lblTKinputSDT = new System.Windows.Forms.Label();
             this.lblTKinputHo = new System.Windows.Forms.Label();
             this.lblTKSDT = new System.Windows.Forms.Label();
@@ -41,6 +44,7 @@
             this.lblTKtrangCaNhan = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tpTKMkBm = new System.Windows.Forms.TabPage();
+            this.bntTkxacNhan = new System.Windows.Forms.Button();
             this.txtTKMKcu = new System.Windows.Forms.TextBox();
             this.lblTKMKCu = new System.Windows.Forms.Label();
             this.txtTKMKxn = new System.Windows.Forms.TextBox();
@@ -53,10 +57,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.txtTKHo = new System.Windows.Forms.TextBox();
-            this.txtTKTen = new System.Windows.Forms.TextBox();
-            this.bntTKXN = new System.Windows.Forms.Button();
-            this.bntTkxacNhan = new System.Windows.Forms.Button();
             this.tcTKcn.SuspendLayout();
             this.tpTTCaNhan.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -74,7 +74,7 @@
             this.tcTKcn.Location = new System.Drawing.Point(0, 0);
             this.tcTKcn.Name = "tcTKcn";
             this.tcTKcn.SelectedIndex = 0;
-            this.tcTKcn.Size = new System.Drawing.Size(395, 451);
+            this.tcTKcn.Size = new System.Drawing.Size(357, 582);
             this.tcTKcn.TabIndex = 0;
             // 
             // tpTTCaNhan
@@ -91,10 +91,36 @@
             this.tpTTCaNhan.Location = new System.Drawing.Point(4, 25);
             this.tpTTCaNhan.Name = "tpTTCaNhan";
             this.tpTTCaNhan.Padding = new System.Windows.Forms.Padding(3);
-            this.tpTTCaNhan.Size = new System.Drawing.Size(387, 422);
+            this.tpTTCaNhan.Size = new System.Drawing.Size(349, 553);
             this.tpTTCaNhan.TabIndex = 0;
             this.tpTTCaNhan.Text = "Thông tin cá nhân";
             this.tpTTCaNhan.UseVisualStyleBackColor = true;
+            // 
+            // bntTKXN
+            // 
+            this.bntTKXN.Location = new System.Drawing.Point(46, 376);
+            this.bntTKXN.Name = "bntTKXN";
+            this.bntTKXN.Size = new System.Drawing.Size(82, 23);
+            this.bntTKXN.TabIndex = 9;
+            this.bntTKXN.Text = "Xác nhận";
+            this.bntTKXN.UseVisualStyleBackColor = true;
+            this.bntTKXN.Click += new System.EventHandler(this.bntTKXN_Click);
+            // 
+            // txtTKTen
+            // 
+            this.txtTKTen.Location = new System.Drawing.Point(133, 254);
+            this.txtTKTen.Name = "txtTKTen";
+            this.txtTKTen.Size = new System.Drawing.Size(100, 22);
+            this.txtTKTen.TabIndex = 8;
+            this.txtTKTen.Text = "Hiền";
+            // 
+            // txtTKHo
+            // 
+            this.txtTKHo.Location = new System.Drawing.Point(133, 204);
+            this.txtTKHo.Name = "txtTKHo";
+            this.txtTKHo.Size = new System.Drawing.Size(100, 22);
+            this.txtTKHo.TabIndex = 7;
+            this.txtTKHo.Text = "Bùi Xuân";
             // 
             // lblTKinputSDT
             // 
@@ -142,11 +168,12 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lblTKtrangCaNhan);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(46, 51);
+            this.panel1.Location = new System.Drawing.Point(50, 51);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(257, 100);
             this.panel1.TabIndex = 0;
@@ -201,10 +228,20 @@
             this.tpTKMkBm.Location = new System.Drawing.Point(4, 25);
             this.tpTKMkBm.Name = "tpTKMkBm";
             this.tpTKMkBm.Padding = new System.Windows.Forms.Padding(3);
-            this.tpTKMkBm.Size = new System.Drawing.Size(387, 422);
+            this.tpTKMkBm.Size = new System.Drawing.Size(349, 553);
             this.tpTKMkBm.TabIndex = 1;
             this.tpTKMkBm.Text = "Mật khẩu và bảo mật";
             this.tpTKMkBm.UseVisualStyleBackColor = true;
+            // 
+            // bntTkxacNhan
+            // 
+            this.bntTkxacNhan.Location = new System.Drawing.Point(216, 355);
+            this.bntTkxacNhan.Name = "bntTkxacNhan";
+            this.bntTkxacNhan.Size = new System.Drawing.Size(85, 23);
+            this.bntTkxacNhan.TabIndex = 22;
+            this.bntTkxacNhan.Text = "Xác nhận";
+            this.bntTkxacNhan.UseVisualStyleBackColor = true;
+            this.bntTkxacNhan.Click += new System.EventHandler(this.bntTkxacNhan_Click);
             // 
             // txtTKMKcu
             // 
@@ -226,7 +263,7 @@
             // txtTKMKxn
             // 
             this.txtTKMKxn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTKMKxn.Location = new System.Drawing.Point(157, 307);
+            this.txtTKMKxn.Location = new System.Drawing.Point(119, 307);
             this.txtTKMKxn.Name = "txtTKMKxn";
             this.txtTKMKxn.PasswordChar = '*';
             this.txtTKMKxn.Size = new System.Drawing.Size(145, 22);
@@ -255,7 +292,7 @@
             // 
             this.lblTKXNMKM.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTKXNMKM.AutoSize = true;
-            this.lblTKXNMKM.Location = new System.Drawing.Point(28, 313);
+            this.lblTKXNMKM.Location = new System.Drawing.Point(-10, 313);
             this.lblTKXNMKM.Name = "lblTKXNMKM";
             this.lblTKXNMKM.Size = new System.Drawing.Size(108, 16);
             this.lblTKXNMKM.TabIndex = 16;
@@ -317,47 +354,11 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // txtTKHo
-            // 
-            this.txtTKHo.Location = new System.Drawing.Point(133, 204);
-            this.txtTKHo.Name = "txtTKHo";
-            this.txtTKHo.Size = new System.Drawing.Size(100, 22);
-            this.txtTKHo.TabIndex = 7;
-            this.txtTKHo.Text = "Bùi Xuân";
-            // 
-            // txtTKTen
-            // 
-            this.txtTKTen.Location = new System.Drawing.Point(133, 254);
-            this.txtTKTen.Name = "txtTKTen";
-            this.txtTKTen.Size = new System.Drawing.Size(100, 22);
-            this.txtTKTen.TabIndex = 8;
-            this.txtTKTen.Text = "Hiền";
-            // 
-            // bntTKXN
-            // 
-            this.bntTKXN.Location = new System.Drawing.Point(46, 376);
-            this.bntTKXN.Name = "bntTKXN";
-            this.bntTKXN.Size = new System.Drawing.Size(82, 23);
-            this.bntTKXN.TabIndex = 9;
-            this.bntTKXN.Text = "Xác nhận";
-            this.bntTKXN.UseVisualStyleBackColor = true;
-            this.bntTKXN.Click += new System.EventHandler(this.bntTKXN_Click);
-            // 
-            // bntTkxacNhan
-            // 
-            this.bntTkxacNhan.Location = new System.Drawing.Point(216, 355);
-            this.bntTkxacNhan.Name = "bntTkxacNhan";
-            this.bntTkxacNhan.Size = new System.Drawing.Size(85, 23);
-            this.bntTkxacNhan.TabIndex = 22;
-            this.bntTkxacNhan.Text = "Xác nhận";
-            this.bntTkxacNhan.UseVisualStyleBackColor = true;
-            this.bntTkxacNhan.Click += new System.EventHandler(this.bntTkxacNhan_Click);
-            // 
             // qlTKCaNhan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(395, 451);
+            this.ClientSize = new System.Drawing.Size(357, 582);
             this.Controls.Add(this.tcTKcn);
             this.Name = "qlTKCaNhan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
