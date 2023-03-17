@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace WindowsFormsAppNhom
 {
@@ -16,11 +19,26 @@ namespace WindowsFormsAppNhom
         {
             InitializeComponent();
         }
-
-        private void dkTK_Load(object sender, EventArgs e)
+        string connectionString = "Data Source=DESKTOP-3H4H726\\SQLEXPRESS;Initial Catalog=quanlybandtdd; Integrated Security=True";
+        SqlConnection connection = null;
+        //băm mật khẩu
+        public static string ComputeMD5Hash(string input)
         {
+            using (MD5 md5 = MD5.Create())
+            {
+                byte[] inputBytes = Encoding.ASCII.GetBytes(input);
+                byte[] hashBytes = md5.ComputeHash(inputBytes);
 
+                StringBuilder sb = new StringBuilder();
+                for (int i = 0; i < hashBytes.Length; i++)
+                {
+                    sb.Append(hashBytes[i].ToString("x2"));
+                }
+                return sb.ToString();
+            }
         }
+
+
 
         private void cbDKHienMK_CheckedChanged(object sender, EventArgs e)
         {
@@ -92,9 +110,17 @@ namespace WindowsFormsAppNhom
                             );
                         if (result == DialogResult.Yes)
                         {
-                            //cập nhật csdl
-                            //đóng form
-                            //mở lại form trước đó
+                            connection = new SqlConnection(connectionString);
+                            connection.Open();
+                            string input = txtDKMK.Text;
+                            string hash = ComputeMD5Hash(input);
+                            string query = "INSERT INTO nguoiDung (maNguoiDung, tenNguoiDung, ngaySinh, gioTinh, soDienThoai, email, diaChi, matKhau) VALUES(2" + customerName + ", '" + txtDKHo.Text + "" + txtDKTen.Text + "', '', '', '" + sdt.ToString() + "', '', '', '" + hash + "'); ";
+                            SqlCommand command = new SqlCommand(query, connection);
+                            command.ExecuteNonQuery();
+                            this.Hide();
+                            dangNhap dangNhap = new dangNhap();
+                            dangNhap.ShowDialog(this);
+                            this.Close();
                         }
                         else
                         {
@@ -147,6 +173,25 @@ namespace WindowsFormsAppNhom
                     }
                 }
             }
+        }
+
+        int customerName = 0;
+        private void dkTK_Load(object sender, EventArgs e)
+        {
+            connection = new SqlConnection(connectionString);
+            connection.Open();
+            string mnd = "select count(*) as sl from nguoiDung";
+            SqlCommand command = new SqlCommand(mnd, connection);
+            SqlDataReader reader = command.ExecuteReader();
+
+            // Lưu dữ liệu vào biến
+            while (reader.Read())
+            {
+                customerName = (int)reader["sl"];
+            }
+            Console.WriteLine(customerName);
+            customerName++;
+
         }
     }
 }
