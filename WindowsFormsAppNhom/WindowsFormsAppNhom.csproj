@@ -143,12 +143,19 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="qlDoiTac.resx">
       <DependentUpon>qlDoiTac.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="qlHDon.resx">
+      <DependentUpon>qlHDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="qlTKCaNhan.resx">
       <DependentUpon>qlTKCaNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xemSP.resx">
+      <DependentUpon>xemSP.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -162,6 +169,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8ab5255b8f194c471508.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
