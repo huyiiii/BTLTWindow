@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(qlTKCaNhan));
             this.tcTKcn = new System.Windows.Forms.TabControl();
             this.tpTTCaNhan = new System.Windows.Forms.TabPage();
             this.bntTKXN = new System.Windows.Forms.Button();
@@ -39,8 +40,7 @@
             this.lblTKTen = new System.Windows.Forms.Label();
             this.lblTKHo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblQLtkHoTen = new System.Windows.Forms.Label();
             this.lblTKtrangCaNhan = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tpTKMkBm = new System.Windows.Forms.TabPage();
@@ -54,9 +54,9 @@
             this.lblTKMKM = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tcTKcn.SuspendLayout();
             this.tpTTCaNhan.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -64,6 +64,7 @@
             this.tpTKMkBm.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // tcTKcn
@@ -74,7 +75,7 @@
             this.tcTKcn.Location = new System.Drawing.Point(0, 0);
             this.tcTKcn.Name = "tcTKcn";
             this.tcTKcn.SelectedIndex = 0;
-            this.tcTKcn.Size = new System.Drawing.Size(357, 582);
+            this.tcTKcn.Size = new System.Drawing.Size(513, 560);
             this.tcTKcn.TabIndex = 0;
             // 
             // tpTTCaNhan
@@ -91,7 +92,7 @@
             this.tpTTCaNhan.Location = new System.Drawing.Point(4, 25);
             this.tpTTCaNhan.Name = "tpTTCaNhan";
             this.tpTTCaNhan.Padding = new System.Windows.Forms.Padding(3);
-            this.tpTTCaNhan.Size = new System.Drawing.Size(349, 553);
+            this.tpTTCaNhan.Size = new System.Drawing.Size(505, 531);
             this.tpTTCaNhan.TabIndex = 0;
             this.tpTTCaNhan.Text = "Thông tin cá nhân";
             this.tpTTCaNhan.UseVisualStyleBackColor = true;
@@ -100,7 +101,7 @@
             // 
             this.bntTKXN.Location = new System.Drawing.Point(46, 376);
             this.bntTKXN.Name = "bntTKXN";
-            this.bntTKXN.Size = new System.Drawing.Size(82, 23);
+            this.bntTKXN.Size = new System.Drawing.Size(128, 49);
             this.bntTKXN.TabIndex = 9;
             this.bntTKXN.Text = "Xác nhận";
             this.bntTKXN.UseVisualStyleBackColor = true;
@@ -108,17 +109,21 @@
             // 
             // txtTKTen
             // 
-            this.txtTKTen.Location = new System.Drawing.Point(133, 254);
+            this.txtTKTen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTKTen.Location = new System.Drawing.Point(104, 254);
             this.txtTKTen.Name = "txtTKTen";
-            this.txtTKTen.Size = new System.Drawing.Size(100, 22);
+            this.txtTKTen.Size = new System.Drawing.Size(335, 22);
             this.txtTKTen.TabIndex = 8;
             this.txtTKTen.Text = "Hiền";
             // 
             // txtTKHo
             // 
-            this.txtTKHo.Location = new System.Drawing.Point(133, 204);
+            this.txtTKHo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTKHo.Location = new System.Drawing.Point(104, 204);
             this.txtTKHo.Name = "txtTKHo";
-            this.txtTKHo.Size = new System.Drawing.Size(100, 22);
+            this.txtTKHo.Size = new System.Drawing.Size(335, 22);
             this.txtTKHo.TabIndex = 7;
             this.txtTKHo.Text = "Bùi Xuân";
             // 
@@ -169,32 +174,23 @@
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lblQLtkHoTen);
             this.panel1.Controls.Add(this.lblTKtrangCaNhan);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(50, 51);
+            this.panel1.Location = new System.Drawing.Point(120, 51);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(257, 100);
             this.panel1.TabIndex = 0;
             // 
-            // label2
+            // lblQLtkHoTen
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(134, 63);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 16);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Bùi Xuân Hiền";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 45);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 16);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "ảnh cá nhân";
+            this.lblQLtkHoTen.AutoSize = true;
+            this.lblQLtkHoTen.Location = new System.Drawing.Point(134, 63);
+            this.lblQLtkHoTen.Name = "lblQLtkHoTen";
+            this.lblQLtkHoTen.Size = new System.Drawing.Size(90, 16);
+            this.lblQLtkHoTen.TabIndex = 3;
+            this.lblQLtkHoTen.Text = "Bùi Xuân Hiền";
+            this.lblQLtkHoTen.Click += new System.EventHandler(this.label2_Click);
             // 
             // lblTKtrangCaNhan
             // 
@@ -208,6 +204,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 100);
@@ -228,16 +225,17 @@
             this.tpTKMkBm.Location = new System.Drawing.Point(4, 25);
             this.tpTKMkBm.Name = "tpTKMkBm";
             this.tpTKMkBm.Padding = new System.Windows.Forms.Padding(3);
-            this.tpTKMkBm.Size = new System.Drawing.Size(349, 553);
+            this.tpTKMkBm.Size = new System.Drawing.Size(505, 531);
             this.tpTKMkBm.TabIndex = 1;
             this.tpTKMkBm.Text = "Mật khẩu và bảo mật";
             this.tpTKMkBm.UseVisualStyleBackColor = true;
             // 
             // bntTkxacNhan
             // 
-            this.bntTkxacNhan.Location = new System.Drawing.Point(216, 355);
+            this.bntTkxacNhan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bntTkxacNhan.Location = new System.Drawing.Point(328, 355);
             this.bntTkxacNhan.Name = "bntTkxacNhan";
-            this.bntTkxacNhan.Size = new System.Drawing.Size(85, 23);
+            this.bntTkxacNhan.Size = new System.Drawing.Size(108, 42);
             this.bntTkxacNhan.TabIndex = 22;
             this.bntTkxacNhan.Text = "Xác nhận";
             this.bntTkxacNhan.UseVisualStyleBackColor = true;
@@ -245,10 +243,12 @@
             // 
             // txtTKMKcu
             // 
+            this.txtTKMKcu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTKMKcu.Location = new System.Drawing.Point(157, 199);
             this.txtTKMKcu.Name = "txtTKMKcu";
             this.txtTKMKcu.PasswordChar = '*';
-            this.txtTKMKcu.Size = new System.Drawing.Size(145, 22);
+            this.txtTKMKcu.Size = new System.Drawing.Size(280, 22);
             this.txtTKMKcu.TabIndex = 21;
             // 
             // lblTKMKCu
@@ -262,25 +262,28 @@
             // 
             // txtTKMKxn
             // 
-            this.txtTKMKxn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTKMKxn.Location = new System.Drawing.Point(119, 307);
+            this.txtTKMKxn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTKMKxn.Location = new System.Drawing.Point(157, 313);
             this.txtTKMKxn.Name = "txtTKMKxn";
             this.txtTKMKxn.PasswordChar = '*';
-            this.txtTKMKxn.Size = new System.Drawing.Size(145, 22);
+            this.txtTKMKxn.Size = new System.Drawing.Size(280, 22);
             this.txtTKMKxn.TabIndex = 19;
             // 
             // txtTKMKmoi
             // 
+            this.txtTKMKmoi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTKMKmoi.Location = new System.Drawing.Point(157, 252);
             this.txtTKMKmoi.Name = "txtTKMKmoi";
             this.txtTKMKmoi.PasswordChar = '*';
-            this.txtTKMKmoi.Size = new System.Drawing.Size(145, 22);
+            this.txtTKMKmoi.Size = new System.Drawing.Size(280, 22);
             this.txtTKMKmoi.TabIndex = 18;
             // 
             // cbTKHienMK
             // 
             this.cbTKHienMK.AutoSize = true;
-            this.cbTKHienMK.Location = new System.Drawing.Point(31, 355);
+            this.cbTKHienMK.Location = new System.Drawing.Point(34, 367);
             this.cbTKHienMK.Name = "cbTKHienMK";
             this.cbTKHienMK.Size = new System.Drawing.Size(114, 20);
             this.cbTKHienMK.TabIndex = 17;
@@ -290,9 +293,8 @@
             // 
             // lblTKXNMKM
             // 
-            this.lblTKXNMKM.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTKXNMKM.AutoSize = true;
-            this.lblTKXNMKM.Location = new System.Drawing.Point(-10, 313);
+            this.lblTKXNMKM.Location = new System.Drawing.Point(30, 313);
             this.lblTKXNMKM.Name = "lblTKXNMKM";
             this.lblTKXNMKM.Size = new System.Drawing.Size(108, 16);
             this.lblTKXNMKM.TabIndex = 16;
@@ -309,13 +311,14 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Location = new System.Drawing.Point(45, 38);
+            this.panel2.Location = new System.Drawing.Point(123, 41);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(257, 100);
+            this.panel2.Size = new System.Drawing.Size(260, 102);
             this.panel2.TabIndex = 1;
             // 
             // label3
@@ -326,15 +329,6 @@
             this.label3.Size = new System.Drawing.Size(90, 16);
             this.label3.TabIndex = 3;
             this.label3.Text = "Bùi Xuân Hiền";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 45);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 16);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "ảnh cá nhân";
             // 
             // label5
             // 
@@ -350,15 +344,25 @@
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox2.Size = new System.Drawing.Size(100, 102);
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 23;
+            this.pictureBox3.TabStop = false;
             // 
             // qlTKCaNhan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(357, 582);
+            this.ClientSize = new System.Drawing.Size(513, 560);
             this.Controls.Add(this.tcTKcn);
             this.Name = "qlTKCaNhan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -374,6 +378,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -386,8 +391,7 @@
         private System.Windows.Forms.Label lblTKTen;
         private System.Windows.Forms.Label lblTKHo;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblQLtkHoTen;
         private System.Windows.Forms.Label lblTKtrangCaNhan;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TabPage tpTKMkBm;
@@ -395,9 +399,7 @@
         private System.Windows.Forms.Label lblTKinputHo;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox txtTKMKcu;
         private System.Windows.Forms.Label lblTKMKCu;
         private System.Windows.Forms.TextBox txtTKMKxn;
@@ -409,5 +411,7 @@
         private System.Windows.Forms.TextBox txtTKTen;
         private System.Windows.Forms.TextBox txtTKHo;
         private System.Windows.Forms.Button bntTkxacNhan;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

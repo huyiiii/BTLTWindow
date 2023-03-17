@@ -68,7 +68,7 @@
             // 
             this.lblDKTen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDKTen.AutoSize = true;
-            this.lblDKTen.Location = new System.Drawing.Point(326, 112);
+            this.lblDKTen.Location = new System.Drawing.Point(350, 118);
             this.lblDKTen.Name = "lblDKTen";
             this.lblDKTen.Size = new System.Drawing.Size(31, 16);
             this.lblDKTen.TabIndex = 2;
@@ -86,7 +86,7 @@
             // lblDKMK
             // 
             this.lblDKMK.AutoSize = true;
-            this.lblDKMK.Location = new System.Drawing.Point(37, 253);
+            this.lblDKMK.Location = new System.Drawing.Point(34, 253);
             this.lblDKMK.Name = "lblDKMK";
             this.lblDKMK.Size = new System.Drawing.Size(61, 16);
             this.lblDKMK.TabIndex = 4;
@@ -96,11 +96,11 @@
             // 
             this.lblDKXN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDKXN.AutoSize = true;
-            this.lblDKXN.Location = new System.Drawing.Point(274, 256);
+            this.lblDKXN.Location = new System.Drawing.Point(262, 253);
             this.lblDKXN.Name = "lblDKXN";
-            this.lblDKXN.Size = new System.Drawing.Size(83, 16);
+            this.lblDKXN.Size = new System.Drawing.Size(119, 16);
             this.lblDKXN.TabIndex = 5;
-            this.lblDKXN.Text = "Xác nhận mk";
+            this.lblDKXN.Text = "Xác nhận mật khẩu";
             // 
             // cbDKHienMK
             // 
@@ -126,7 +126,7 @@
             // bntDKDK
             // 
             this.bntDKDK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bntDKDK.Location = new System.Drawing.Point(496, 384);
+            this.bntDKDK.Location = new System.Drawing.Point(431, 384);
             this.bntDKDK.Name = "bntDKDK";
             this.bntDKDK.Size = new System.Drawing.Size(117, 23);
             this.bntDKDK.TabIndex = 9;
@@ -144,7 +144,7 @@
             // txtDKTen
             // 
             this.txtDKTen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDKTen.Location = new System.Drawing.Point(382, 111);
+            this.txtDKTen.Location = new System.Drawing.Point(403, 112);
             this.txtDKTen.Name = "txtDKTen";
             this.txtDKTen.Size = new System.Drawing.Size(145, 22);
             this.txtDKTen.TabIndex = 11;
@@ -167,7 +167,7 @@
             // txtDKXN
             // 
             this.txtDKXN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDKXN.Location = new System.Drawing.Point(382, 250);
+            this.txtDKXN.Location = new System.Drawing.Point(403, 247);
             this.txtDKXN.Name = "txtDKXN";
             this.txtDKXN.PasswordChar = '*';
             this.txtDKXN.Size = new System.Drawing.Size(145, 22);
@@ -185,7 +185,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(655, 448);
+            this.ClientSize = new System.Drawing.Size(618, 486);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtDKXN);
             this.Controls.Add(this.txtDKMK);
@@ -203,7 +203,7 @@
             this.Controls.Add(this.lblDK);
             this.Name = "dkTK";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "dkTK";
+            this.Text = "Đăng ký tài khoản";
             this.Load += new System.EventHandler(this.dkTK_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
