@@ -26,22 +26,14 @@ namespace WindowsFormsAppNhom
             childForm.BringToFront();
             childForm.Show();
         }
-        private void tpKhachHangXemSP_Click(object sender, EventArgs e)
+        private void khachHang_Load(object sender, EventArgs e)
         {
             Form childForm = new xemSP();
             ShowChildForm(childForm, tpKhachHangXemSP);
-        }
-
-        private void tpKhachHangTKCN_Click(object sender, EventArgs e)
-        {
-            Form childForm = new qlTKCaNhan();
-            ShowChildForm(childForm, tpKhachHangTKCN);
-        }
-
-        private void tpKhachHangMSP_Click(object sender, EventArgs e)
-        {
-            Form childForm = new muaSanPham();
-            ShowChildForm(childForm, tpKhachHangMSP);
+            Form childForm1 = new qlTKCaNhan();
+            ShowChildForm(childForm1, tpKhachHangTKCN);
+            Form childForm2 = new muaSanPham();
+            ShowChildForm(childForm2, tpKhachHangMSP);
         }
     }
 }

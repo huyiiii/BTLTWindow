@@ -56,7 +56,6 @@
             this.tpKhachHangXemSP.TabIndex = 0;
             this.tpKhachHangXemSP.Text = "Xem sản phẩm";
             this.tpKhachHangXemSP.UseVisualStyleBackColor = true;
-            this.tpKhachHangXemSP.Click += new System.EventHandler(this.tpKhachHangXemSP_Click);
             // 
             // tpKhachHangTKCN
             // 
@@ -67,7 +66,6 @@
             this.tpKhachHangTKCN.TabIndex = 1;
             this.tpKhachHangTKCN.Text = "Quản lý tài khoản cá nhân";
             this.tpKhachHangTKCN.UseVisualStyleBackColor = true;
-            this.tpKhachHangTKCN.Click += new System.EventHandler(this.tpKhachHangTKCN_Click);
             // 
             // tpKhachHangMSP
             // 
@@ -78,7 +76,6 @@
             this.tpKhachHangMSP.TabIndex = 2;
             this.tpKhachHangMSP.Text = "Mua sản phẩm";
             this.tpKhachHangMSP.UseVisualStyleBackColor = true;
-            this.tpKhachHangMSP.Click += new System.EventHandler(this.tpKhachHangMSP_Click);
             // 
             // khachHang
             // 
@@ -88,6 +85,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "khachHang";
             this.Text = "khachHang";
+            this.Load += new System.EventHandler(this.khachHang_Load);
             this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 

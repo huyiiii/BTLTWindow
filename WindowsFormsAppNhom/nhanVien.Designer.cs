@@ -56,7 +56,6 @@
             this.tpNhanVienBSP.TabIndex = 0;
             this.tpNhanVienBSP.Text = "Bán sản phẩm";
             this.tpNhanVienBSP.UseVisualStyleBackColor = true;
-            this.tpNhanVienBSP.Click += new System.EventHandler(this.tpNhanVienBSP_Click);
             // 
             // tpNhanVienQLHD
             // 
@@ -67,7 +66,6 @@
             this.tpNhanVienQLHD.TabIndex = 1;
             this.tpNhanVienQLHD.Text = "Quản lý hóa đơn";
             this.tpNhanVienQLHD.UseVisualStyleBackColor = true;
-            this.tpNhanVienQLHD.Click += new System.EventHandler(this.tpNhanVienQLHD_Click);
             // 
             // tpNhanVienQLSP
             // 
@@ -78,7 +76,6 @@
             this.tpNhanVienQLSP.TabIndex = 2;
             this.tpNhanVienQLSP.Text = "Quản lý sản phẩm";
             this.tpNhanVienQLSP.UseVisualStyleBackColor = true;
-            this.tpNhanVienQLSP.Click += new System.EventHandler(this.tpNhanVienQLSP_Click);
             // 
             // nhanVien
             // 
@@ -88,6 +85,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "nhanVien";
             this.Text = "nhanVien";
+            this.Load += new System.EventHandler(this.nhanVien_Load);
             this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 

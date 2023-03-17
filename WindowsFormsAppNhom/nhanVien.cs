@@ -26,22 +26,14 @@ namespace WindowsFormsAppNhom
             childForm.BringToFront();
             childForm.Show();
         }
-        private void tpNhanVienBSP_Click(object sender, EventArgs e)
+        private void nhanVien_Load(object sender, EventArgs e)
         {
             Form childForm = new banSp();
             ShowChildForm(childForm, tpNhanVienBSP);
-        }
-
-        private void tpNhanVienQLHD_Click(object sender, EventArgs e)
-        {
-            Form childForm = new qlHDon();
-            ShowChildForm(childForm, tpNhanVienQLHD);
-        }
-
-        private void tpNhanVienQLSP_Click(object sender, EventArgs e)
-        {
-            Form childForm = new qlSP();
-            ShowChildForm(childForm, tpNhanVienQLSP);
+            Form childForm1 = new qlHDon();
+            ShowChildForm(childForm1, tpNhanVienQLHD);
+            Form childForm2 = new qlSP();
+            ShowChildForm(childForm2, tpNhanVienQLSP);
         }
     }
 }

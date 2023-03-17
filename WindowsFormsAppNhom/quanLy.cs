@@ -26,24 +26,14 @@ namespace WindowsFormsAppNhom
             childForm.BringToFront();
             childForm.Show();
         }
-
-        private void tpQuanLyNV_Click(object sender, EventArgs e)
+        private void quanLy_Load(object sender, EventArgs e)
         {
             Form childForm = new qlNV();
-            ShowChildForm(childForm, tpQuanLyNV); 
-
-        }
-
-        private void tpQuanLyDT_Click(object sender, EventArgs e)
-        {
-            Form childForm = new qlDT();
-            ShowChildForm(childForm, tpQuanLyDT);
-        }
-
-        private void tpQuanLyDoiTac_Click(object sender, EventArgs e)
-        {
-            Form childForm = new qlDoiTac();
-            ShowChildForm(childForm, tpQuanLyDoiTac);
+            ShowChildForm(childForm, tpQuanLyNV);
+            Form childForm1 = new qlDT();
+            ShowChildForm(childForm1, tpQuanLyDT);
+            Form childForm2 = new qlDoiTac();
+            ShowChildForm(childForm2, tpQuanLyDoiTac);
         }
     }
 }

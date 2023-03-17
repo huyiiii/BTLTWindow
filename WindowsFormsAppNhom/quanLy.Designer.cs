@@ -56,7 +56,6 @@
             this.tpQuanLyNV.TabIndex = 0;
             this.tpQuanLyNV.Text = "Quản lý nhân viên";
             this.tpQuanLyNV.UseVisualStyleBackColor = true;
-            this.tpQuanLyNV.Click += new System.EventHandler(this.tpQuanLyNV_Click);
             // 
             // tpQuanLyDT
             // 
@@ -67,7 +66,6 @@
             this.tpQuanLyDT.TabIndex = 1;
             this.tpQuanLyDT.Text = "Quản lý doanh thu";
             this.tpQuanLyDT.UseVisualStyleBackColor = true;
-            this.tpQuanLyDT.Click += new System.EventHandler(this.tpQuanLyDT_Click);
             // 
             // tpQuanLyDoiTac
             // 
@@ -78,7 +76,6 @@
             this.tpQuanLyDoiTac.TabIndex = 2;
             this.tpQuanLyDoiTac.Text = "Quản lý đối tác";
             this.tpQuanLyDoiTac.UseVisualStyleBackColor = true;
-            this.tpQuanLyDoiTac.Click += new System.EventHandler(this.tpQuanLyDoiTac_Click);
             // 
             // quanLy
             // 
@@ -88,6 +85,7 @@
             this.Controls.Add(this.tcQuanLy);
             this.Name = "quanLy";
             this.Text = "quanLy";
+            this.Load += new System.EventHandler(this.quanLy_Load);
             this.tcQuanLy.ResumeLayout(false);
             this.ResumeLayout(false);
 
