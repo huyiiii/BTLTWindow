@@ -112,7 +112,12 @@ namespace WindowsFormsAppNhom
 
         private void label2_Click(object sender, EventArgs e)
         {
-            lblQLtkHoTen.Text=txtTKHo.Text + txtTKTen.Text;
+            lblTTCNHoTen.Text=txtTKHo.Text + txtTKTen.Text;
+        }
+
+        private void lblTKMKCu_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

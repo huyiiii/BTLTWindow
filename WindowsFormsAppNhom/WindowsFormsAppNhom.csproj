@@ -70,11 +70,23 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="khachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="khachHang.Designer.cs">
+      <DependentUpon>khachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="muaSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="muaSanPham.Designer.cs">
       <DependentUpon>muaSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="nhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="nhanVien.Designer.cs">
+      <DependentUpon>nhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -114,6 +126,12 @@
     <Compile Include="qlTKCaNhan.Designer.cs">
       <DependentUpon>qlTKCaNhan.cs</DependentUpon>
     </Compile>
+    <Compile Include="quanLy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="quanLy.Designer.cs">
+      <DependentUpon>quanLy.cs</DependentUpon>
+    </Compile>
     <Compile Include="xemSP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,8 +150,14 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="khachHang.resx">
+      <DependentUpon>khachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="muaSanPham.resx">
       <DependentUpon>muaSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nhanVien.resx">
+      <DependentUpon>nhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -152,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="qlTKCaNhan.resx">
       <DependentUpon>qlTKCaNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="quanLy.resx">
+      <DependentUpon>quanLy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="xemSP.resx">
       <DependentUpon>xemSP.cs</DependentUpon>
