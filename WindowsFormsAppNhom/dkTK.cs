@@ -91,7 +91,7 @@ namespace WindowsFormsAppNhom
                     int sdt = int.Parse(txtDKSDT.Text);
                     if (txtDKMK.Text == txtDKXN.Text)
                     {
-                        if (sdt.ToString().Length > 11 || sdt.ToString().Length < 10)
+                        if (sdt.ToString().Length > 11 || sdt.ToString().Length < 8)
                         {
                             txtDKSDT.Text = "";
                             txtDKMK.Focus();
@@ -114,7 +114,7 @@ namespace WindowsFormsAppNhom
                             connection.Open();
                             string input = txtDKMK.Text;
                             string hash = ComputeMD5Hash(input);
-                            string query = "INSERT INTO nguoiDung (maNguoiDung, tenNguoiDung, ngaySinh, gioTinh, soDienThoai, email, diaChi, matKhau) VALUES(2" + customerName + ", '" + txtDKHo.Text + "" + txtDKTen.Text + "', '', '', '" + sdt.ToString() + "', '', '', '" + hash + "'); ";
+                            string query = "INSERT INTO khachHang (maKH, tenKH, soDienThoai, matKhau) VALUES(" + customerName + ", '" + txtDKHo.Text + "" + txtDKTen.Text + "', '" + txtDKSDT.Text + "', '" + hash + "'); ";
                             SqlCommand command = new SqlCommand(query, connection);
                             command.ExecuteNonQuery();
                             this.Hide();
@@ -180,7 +180,7 @@ namespace WindowsFormsAppNhom
         {
             connection = new SqlConnection(connectionString);
             connection.Open();
-            string mnd = "select count(*) as sl from nguoiDung";
+            string mnd = "select count(*) as sl from khachHang";
             SqlCommand command = new SqlCommand(mnd, connection);
             SqlDataReader reader = command.ExecuteReader();
 
@@ -193,5 +193,7 @@ namespace WindowsFormsAppNhom
             customerName++;
 
         }
+
+
     }
 }
