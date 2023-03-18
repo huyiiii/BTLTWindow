@@ -166,10 +166,28 @@ namespace WindowsFormsAppNhom
                 }
                 else
                 {
-                    DialogResult result = MessageBox.Show(
-                   "chuyển form",
-                   "Warning",
-                   MessageBoxButtons.OK);
+                    switch (loaiTK)
+                    {
+                        case "QuanLy":
+                            this.Hide();
+                            quanLy quanLy = new quanLy();
+                            quanLy.ShowDialog();
+                            this.Close();
+                            break;
+                        case "NhanVien":
+                            this.Hide();
+                            nhanVien nhanVien = new nhanVien();
+                            nhanVien.ShowDialog();
+                            this.Close();
+                            break;
+                        case "KhachHang":
+                            this.Hide();
+                            khachHang khachHang = new khachHang();
+                            khachHang.ShowDialog();
+                            this.Close();
+                            break;
+                    }
+
                 }
             }
 

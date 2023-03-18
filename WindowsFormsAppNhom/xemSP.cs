@@ -19,10 +19,19 @@ namespace WindowsFormsAppNhom
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            dkTK dkTK = new dkTK();
+            dkTK.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            dangNhap dangNhap = new dangNhap();
+            dangNhap.ShowDialog();
+        }
+
+        private void xemSP_Load(object sender, EventArgs e)
         {
 
         }

@@ -124,7 +124,7 @@ namespace WindowsFormsAppNhom
                         }
                         else
                         {
-                            //đóng form
+                            
                             this.Close();
                         }
                     }
