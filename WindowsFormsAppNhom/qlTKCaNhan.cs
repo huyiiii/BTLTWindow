@@ -119,5 +119,10 @@ namespace WindowsFormsAppNhom
         {
 
         }
+
+        private void qlTKCaNhan_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

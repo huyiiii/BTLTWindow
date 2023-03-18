@@ -368,6 +368,7 @@
             this.Name = "qlTKCaNhan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trung tâm tài khoản";
+            this.Load += new System.EventHandler(this.qlTKCaNhan_Load);
             this.tcTKcn.ResumeLayout(false);
             this.tpTTCaNhan.ResumeLayout(false);
             this.tpTTCaNhan.PerformLayout();
