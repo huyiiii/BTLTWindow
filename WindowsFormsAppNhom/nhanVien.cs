@@ -32,8 +32,8 @@ namespace WindowsFormsAppNhom
             ShowChildForm(childForm, tpNhanVienBSP);
             Form childForm1 = new qlHDon();
             ShowChildForm(childForm1, tpNhanVienQLHD);
-           // Form childForm2 = new qlSP();
-           // ShowChildForm(childForm2, tpNhanVienQLSP);
+            Form childForm2 = new qlSP();
+            ShowChildForm(childForm2, tpNhanVienQLSP);
         }
     }
 }
