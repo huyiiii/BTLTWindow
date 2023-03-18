@@ -134,11 +134,8 @@ namespace WindowsFormsAppNhom
             // 
             // splitContainer2
             // 
-<<<<<<< HEAD
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-=======
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Top;
->>>>>>> d1270962628290bca677e44147fad5b9e326125e
             this.splitContainer2.Location = new System.Drawing.Point(0, 0);
             this.splitContainer2.Name = "splitContainer2";
             // 
@@ -161,13 +158,10 @@ namespace WindowsFormsAppNhom
             this.splitContainer2.Panel2.Controls.Add(this.textBox4);
             this.splitContainer2.Panel2.Controls.Add(this.label3);
             this.splitContainer2.Panel2.Controls.Add(this.label4);
-<<<<<<< HEAD
             this.splitContainer2.Size = new System.Drawing.Size(857, 181);
             this.splitContainer2.SplitterDistance = 424;
-=======
             this.splitContainer2.Size = new System.Drawing.Size(799, 176);
             this.splitContainer2.SplitterDistance = 396;
->>>>>>> d1270962628290bca677e44147fad5b9e326125e
             this.splitContainer2.TabIndex = 0;
             // 
             // textBox2
@@ -299,11 +293,11 @@ namespace WindowsFormsAppNhom
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-<<<<<<< HEAD
+
             this.dataGridView1.Size = new System.Drawing.Size(857, 262);
-=======
+
             this.dataGridView1.Size = new System.Drawing.Size(799, 262);
->>>>>>> d1270962628290bca677e44147fad5b9e326125e
+
             this.dataGridView1.TabIndex = 9;
             // 
             // qlDoiTac
