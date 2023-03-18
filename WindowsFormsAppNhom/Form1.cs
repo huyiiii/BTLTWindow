@@ -24,7 +24,7 @@ namespace WindowsFormsAppNhom
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            banSp banSp = new banSp();
+            nhanVien banSp = new nhanVien();
             banSp.ShowDialog(this);
             this.Close();
         }
@@ -32,24 +32,8 @@ namespace WindowsFormsAppNhom
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            dangNhap dangNhap = new dangNhap();
+            khachHang dangNhap = new khachHang();
             dangNhap.ShowDialog(this);
-            this.Close();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            dkTK dkTK = new dkTK();
-            dkTK.ShowDialog(this);
-            this.Close();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            muaSanPham muaSanPham = new muaSanPham();
-            muaSanPham.ShowDialog(this);
             this.Close();
         }
 
@@ -61,50 +45,12 @@ namespace WindowsFormsAppNhom
             this.Close();
         }
 
-        private void button7_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            qlDT qlDT = new qlDT();
-            qlDT.ShowDialog(this);
-            this.Close();
-        }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            qlHDon qlHDon = new qlHDon();
-            qlHDon.ShowDialog(this);
-            this.Close();
-        }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void button12_Click(object sender, EventArgs e)
         {
             this.Hide();
-            qlNV qlNV = new qlNV();
-            qlNV.ShowDialog(this);
-            this.Close();
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            qlSP qlSP = new qlSP();
-            qlSP.ShowDialog(this);
-            this.Close();
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            qlTKCaNhan qlTKCaNhan = new qlTKCaNhan();
-            qlTKCaNhan.ShowDialog(this);
-            this.Close();
-        }
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            xemSP xemSP = new xemSP();
+            quanLy xemSP = new quanLy();
             xemSP.ShowDialog(this);
             this.Close();
         }
