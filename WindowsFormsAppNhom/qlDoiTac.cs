@@ -16,5 +16,10 @@ namespace WindowsFormsAppNhom
         {
             InitializeComponent();
         }
+
+        private void qlDoiTac_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
