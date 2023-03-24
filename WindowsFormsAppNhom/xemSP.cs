@@ -172,7 +172,7 @@ namespace WindowsFormsAppNhom
             {
                 i++;
             }
-            textBox1.Text = i.ToString();
+        
             for(int j=0;j<i;j++)
             {
                 pictureBoxes[j].ImageLocation = (string)dataListLink[j];

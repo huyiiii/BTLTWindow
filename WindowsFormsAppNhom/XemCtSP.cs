@@ -31,5 +31,13 @@ namespace WindowsFormsAppNhom
             lbslcon.Text = "Số lượng: " + xemSP.stringslcon;
             lbgiasp.Text = "Giá sản phẩm: " + xemSP.stringGiasp;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            muaSanPham mua = new muaSanPham();
+            mua.ShowDialog();
+            XemCtSP xemCtSP = new XemCtSP();
+            xemCtSP.Close();
+        }
     }
 }
