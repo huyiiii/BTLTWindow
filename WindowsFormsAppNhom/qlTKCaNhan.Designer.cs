@@ -54,7 +54,7 @@
             this.lblTKMKM = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblMKBM = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tcTKcn.SuspendLayout();
@@ -187,9 +187,8 @@
             this.lblTTCNHoTen.AutoSize = true;
             this.lblTTCNHoTen.Location = new System.Drawing.Point(134, 63);
             this.lblTTCNHoTen.Name = "lblTTCNHoTen";
-            this.lblTTCNHoTen.Size = new System.Drawing.Size(90, 16);
+            this.lblTTCNHoTen.Size = new System.Drawing.Size(0, 16);
             this.lblTTCNHoTen.TabIndex = 3;
-            this.lblTTCNHoTen.Text = "Bùi Xuân Hiền";
             this.lblTTCNHoTen.Click += new System.EventHandler(this.label2_Click);
             // 
             // lblTTCaNhan
@@ -314,7 +313,7 @@
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.lblMKBM);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Location = new System.Drawing.Point(123, 41);
@@ -332,14 +331,13 @@
             this.pictureBox3.TabIndex = 23;
             this.pictureBox3.TabStop = false;
             // 
-            // label3
+            // lblMKBM
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(134, 63);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 16);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Bùi Xuân Hiền";
+            this.lblMKBM.AutoSize = true;
+            this.lblMKBM.Location = new System.Drawing.Point(134, 63);
+            this.lblMKBM.Name = "lblMKBM";
+            this.lblMKBM.Size = new System.Drawing.Size(0, 16);
+            this.lblMKBM.TabIndex = 3;
             // 
             // label5
             // 
@@ -400,7 +398,7 @@
         private System.Windows.Forms.Label lblTKinputSDT;
         private System.Windows.Forms.Label lblTKinputHo;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblMKBM;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtTKMKcu;
         private System.Windows.Forms.Label lblTKMKCu;

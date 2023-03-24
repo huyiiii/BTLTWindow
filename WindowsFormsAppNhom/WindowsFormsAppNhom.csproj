@@ -33,8 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,6 +47,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="banSp.cs">
@@ -69,6 +73,18 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XemCtHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XemCtHD.Designer.cs">
+      <DependentUpon>XemCtHD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XemCtSP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XemCtSP.Designer.cs">
+      <DependentUpon>XemCtSP.cs</DependentUpon>
     </Compile>
     <Compile Include="khachHang.cs">
       <SubType>Form</SubType>
@@ -171,6 +187,9 @@
     <EmbeddedResource Include="qlDoiTac.resx">
       <DependentUpon>qlDoiTac.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="qlHDon.resx">
+      <DependentUpon>qlHDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="qlSP.resx">
       <DependentUpon>qlSP.cs</DependentUpon>
     </EmbeddedResource>
@@ -179,6 +198,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="quanLy.resx">
       <DependentUpon>quanLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XemCtHD.resx">
+      <DependentUpon>XemCtHD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XemCtSP.resx">
+      <DependentUpon>XemCtSP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="xemSP.resx">
       <DependentUpon>xemSP.cs</DependentUpon>

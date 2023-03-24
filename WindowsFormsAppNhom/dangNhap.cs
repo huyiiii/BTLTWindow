@@ -14,14 +14,21 @@ using System.Windows.Forms;
 
 namespace WindowsFormsAppNhom
 {
+    
     public partial class dangNhap : Form
     {
+        //tạo biến để lưu tên đăng nhập và mật khẩu
+        public static string TenDN;
+        public static string LoaiTK;
+
         public dangNhap()
         {
             InitializeComponent();
         }
-        string connectionString = "Data Source=DESKTOP-3H4H726\\SQLEXPRESS;Initial Catalog=quanlybandtdd; Integrated Security=True";
+        //tại chuỗi kệt nối với sql server
+        string connectionString = "Data Source=ADMIN\\QUOCHUY;Initial Catalog=quanlybandtdd; Integrated Security=True";
         SqlConnection connection = null;
+
         //băm mật khẩu
         public static string ComputeMD5Hash(string input)
         {
@@ -42,6 +49,7 @@ namespace WindowsFormsAppNhom
         {
 
         }
+        //function dislay password
 
         private void ChkShow_CheckedChanged(object sender, EventArgs e)
         {
@@ -59,7 +67,7 @@ namespace WindowsFormsAppNhom
         {
             this.Close();
         }
-
+        
         private void btnDNMK_Click(object sender, EventArgs e)
         {
             if (cbDNLTK.Text == "")
@@ -119,16 +127,19 @@ namespace WindowsFormsAppNhom
                 connection.Open();
                 string input = txtDNMK.Text;
                 string hash = ComputeMD5Hash(input);
+                //check mật khẩu của loại tài khoản đã chịn khi đăng nhập để so sánh với mật khầu vừa nhập
                 switch (loaiTK)
                 {
                     case "QuanLy":
                         string mnd = "select matKhau from quanLy\r\n\twhere soDienThoai like '" + txtDNTenDN.Text + "'";
                         SqlCommand command = new SqlCommand(mnd, connection);
                         SqlDataReader reader = command.ExecuteReader();
+
                         while (reader.Read())
                         {
                             mk = (string)reader["matKhau"];
                         }
+                        reader.Close();
                         break;
                     case "NhanVien":
                         string mnd1 = "select matKhau from nhanVien\r\n\twhere soDienThoai like '" + txtDNTenDN.Text + "'";
@@ -138,6 +149,7 @@ namespace WindowsFormsAppNhom
                         {
                             mk = (string)reader1["matKhau"];
                         }
+                        reader1.Close();
                         break;
                     case "KhachHang":
                         string mnd2 = "select matKhau from khachHang\r\n\twhere soDienThoai like '" + txtDNTenDN.Text + "'";
@@ -147,6 +159,7 @@ namespace WindowsFormsAppNhom
                         {
                             mk = (string)reader2["matKhau"];
                         }
+                        reader2.Close();    
                         break;
                 }
                 Console.WriteLine(txtDNTenDN.Text);
@@ -171,23 +184,22 @@ namespace WindowsFormsAppNhom
                         case "QuanLy":
                             this.Hide();
                             quanLy quanLy = new quanLy();
-                            quanLy.ShowDialog();
-                            this.Close();
+                            quanLy.Show();
                             break;
                         case "NhanVien":
                             this.Hide();
                             nhanVien nhanVien = new nhanVien();
-                            nhanVien.ShowDialog();
-                            this.Close();
+                            nhanVien.Show();
                             break;
                         case "KhachHang":
                             this.Hide();
                             khachHang khachHang = new khachHang();
-                            khachHang.ShowDialog();
-                            this.Close();
+                            khachHang.Show();
                             break;
                     }
-
+                    //lấy tên đăng nhập để dùng
+                    TenDN = txtDNTenDN.Text;
+                    LoaiTK = cbDNLTK.Text;
                 }
             }
 

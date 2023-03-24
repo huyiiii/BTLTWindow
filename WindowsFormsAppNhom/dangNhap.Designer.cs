@@ -154,6 +154,7 @@ namespace WindowsFormsAppNhom
             // btDNThoat
             // 
             this.btDNThoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btDNThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btDNThoat.Location = new System.Drawing.Point(303, 192);
             this.btDNThoat.Name = "btDNThoat";
             this.btDNThoat.Size = new System.Drawing.Size(106, 47);
@@ -175,9 +176,11 @@ namespace WindowsFormsAppNhom
             // 
             // dangNhap
             // 
+            this.AcceptButton = this.btnDNMK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.CancelButton = this.btDNThoat;
             this.ClientSize = new System.Drawing.Size(483, 264);
             this.Controls.Add(this.cbHienMK);
             this.Controls.Add(this.btDNThoat);

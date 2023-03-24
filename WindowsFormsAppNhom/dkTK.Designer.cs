@@ -115,6 +115,7 @@
             // 
             // bntDKDN
             // 
+            this.bntDKDN.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.bntDKDN.Location = new System.Drawing.Point(37, 384);
             this.bntDKDN.Name = "bntDKDN";
             this.bntDKDN.Size = new System.Drawing.Size(117, 23);
@@ -183,8 +184,10 @@
             // 
             // dkTK
             // 
+            this.AcceptButton = this.bntDKDK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.bntDKDN;
             this.ClientSize = new System.Drawing.Size(618, 486);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtDKXN);

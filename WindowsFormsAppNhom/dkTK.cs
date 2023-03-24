@@ -19,9 +19,10 @@ namespace WindowsFormsAppNhom
         {
             InitializeComponent();
         }
-        string connectionString = "Data Source=DESKTOP-3H4H726\\SQLEXPRESS;Initial Catalog=quanlybandtdd; Integrated Security=True";
+        string connectionString = "Data Source=ADMIN\\QUOCHUY;Initial Catalog=quanlybandtdd; Integrated Security=True";
         SqlConnection connection = null;
         //băm mật khẩu
+        dangNhap dangNhap = new dangNhap();
         public static string ComputeMD5Hash(string input)
         {
             using (MD5 md5 = MD5.Create())
@@ -57,7 +58,7 @@ namespace WindowsFormsAppNhom
         private void bntDKDN_Click(object sender, EventArgs e)
         {
             this.Hide();
-            dangNhap dangNhap = new dangNhap();
+
             dangNhap.ShowDialog(this);
             this.Close();
         }
@@ -102,31 +103,61 @@ namespace WindowsFormsAppNhom
                             txtDKMK.Text = "";
                             txtDKMK.Focus();
                         }
-                        DialogResult result = MessageBox.Show(
+                        string checkSDT = "";
+                        connection = new SqlConnection(connectionString);
+                        connection.Open();
+                        string queString = "select soDienThoai from khachHang where soDienThoai like '" + txtDKSDT.Text + "'";
+                        SqlCommand sqlCommand = new SqlCommand(queString, connection);
+                        SqlDataReader reader = sqlCommand.ExecuteReader();
+                        while (reader.Read())
+                        {
+                            checkSDT = reader["soDienThoai"].ToString();
+                        }
+                        Console.WriteLine("checkSDT: " + checkSDT + "và" + txtDKSDT.Text);
+                        reader.Close();
+                        connection.Close();
+                        if (checkSDT == txtDKSDT.Text)
+                        {
+                            DialogResult result1 = MessageBox.Show(
+                                "Số điện thoại bạn nhập đã có người đăng ký.",
+                                "Thông báo",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information
+                                );
+                            txtDKSDT.Text = "";
+                        }
+                        else
+                        {
+                            DialogResult result = MessageBox.Show(
                             "Bạn có muốn đăng ký tài khoản không.",
                             "Thông báo",
                             MessageBoxButtons.YesNo,
                             MessageBoxIcon.Question
                             );
-                        if (result == DialogResult.Yes)
-                        {
-                            connection = new SqlConnection(connectionString);
-                            connection.Open();
-                            string input = txtDKMK.Text;
-                            string hash = ComputeMD5Hash(input);
-                            string query = "INSERT INTO khachHang (maKH, tenKH, soDienThoai, matKhau) VALUES(" + customerName + ", '" + txtDKHo.Text + "" + txtDKTen.Text + "', '" + txtDKSDT.Text + "', '" + hash + "'); ";
-                            SqlCommand command = new SqlCommand(query, connection);
-                            command.ExecuteNonQuery();
-                            this.Hide();
-                            dangNhap dangNhap = new dangNhap();
-                            dangNhap.ShowDialog(this);
-                            this.Close();
+                            if (result == DialogResult.Yes)
+                            {
+                                connection = new SqlConnection(connectionString);
+                                connection.Open();
+                                string input = txtDKMK.Text;
+                                string hash = ComputeMD5Hash(input);
+                                string query = "INSERT INTO khachHang VALUES(" + customerName + ", '" + txtDKHo.Text + "" + ' ' + "" + txtDKTen.Text + "', '" + txtDKSDT.Text + "', '" + hash + "',''); ";
+                                SqlCommand command = new SqlCommand(query, connection);
+                                command.ExecuteNonQuery();
+                                this.Hide();
+                                dangNhap dangNhap = new dangNhap();
+                                dangNhap.ShowDialog(this);
+                                this.Close();
+                                connection.Close();
+                            }
+                            else
+
+                            {
+
+                                this.Close();
+                            }
+
                         }
-                        else
-                        {
-                            
-                            this.Close();
-                        }
+
                     }
                     else
                     {
@@ -191,6 +222,7 @@ namespace WindowsFormsAppNhom
             }
             Console.WriteLine(customerName);
             customerName++;
+            connection.Close();
 
         }
 
