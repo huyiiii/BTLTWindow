@@ -292,6 +292,7 @@ namespace WindowsFormsAppNhom
             this.dgv.RowTemplate.Height = 24;
             this.dgv.Size = new System.Drawing.Size(1168, 262);
             this.dgv.TabIndex = 9;
+            this.dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellClick);
             // 
             // qlDoiTac
             // 

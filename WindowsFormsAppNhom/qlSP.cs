@@ -13,7 +13,7 @@ namespace WindowsFormsAppNhom
 {
     public partial class qlSP : Form
     {
-        string chuoiketnoi = "Data Source=ADMIN\\QUOCHUY;"
+        string chuoiketnoi = "DESKTOP-D1DV4KN\\SQLEXPRESS;"
             + "Initial Catalog=quanlybandtdd; "
             +"Integrated Security=True";
         SqlConnection conn = null;

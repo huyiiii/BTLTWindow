@@ -28,7 +28,7 @@ namespace WindowsFormsAppNhom
         public List<object> datalistGia = new List<object>();
         public List<object> datalistSl = new List<object>();
         List<PictureBox> pictureBoxes = new List<PictureBox>();
-        string connectionString = "Data Source=ADMIN\\QUOCHUY;Initial Catalog=quanlybandtdd; Integrated Security=True";
+        string connectionString = "DESKTOP-D1DV4KN\\SQLEXPRESS;Initial Catalog=quanlybandtdd; Integrated Security=True";
         SqlConnection connection = null;
         public xemSP()
         {

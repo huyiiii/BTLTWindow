@@ -190,6 +190,9 @@
     <EmbeddedResource Include="qlHDon.resx">
       <DependentUpon>qlHDon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="qlNV.resx">
+      <DependentUpon>qlNV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="qlSP.resx">
       <DependentUpon>qlSP.cs</DependentUpon>
     </EmbeddedResource>
