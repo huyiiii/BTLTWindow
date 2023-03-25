@@ -21,7 +21,7 @@ namespace WindowsFormsAppNhom
         {
             InitializeComponent();
         }
-        string connectionString = "Data Source=ADMIN\\QUOCHUY;" + "Initial Catalog = quanlybandtdd;" + "Integrated Security = True";
+        string connectionString = "DESKTOP-D1DV4KN\\SQLEXPRESS;" + "Initial Catalog = quanlybandtdd;" + "Integrated Security = True";
         SqlConnection connection = null;
 
         //Khởi tạo các đối tượng SqlConnection,SqlDataAdapter,DataTable;
@@ -59,7 +59,7 @@ namespace WindowsFormsAppNhom
         {
 
             if (tbmadt.Text.Length == 0 || tbmasp.Text.Length == 0 || tbtendt.Text.Length == 0 || tbtensp.Text.Length == 0)
-                MessageBox.Show("Hãy nhập dữ liệu");
+                MessageBox.Show("Hãy nhập đầy đủ dữ liệu");
             else
             {
                 sql = "insert into doiTac values (" + tbmadt.Text + "," + tbmasp.Text + ", '" + tbtendt.Text + "' , '" + tbtensp.Text + "' ," + "' '" + ");";
@@ -70,7 +70,11 @@ namespace WindowsFormsAppNhom
                 string query = "select maDT as 'Mã đối tác', tenDT as 'Tên đối tác', maHH as 'Mã hàng hóa', tensp as 'Tên hàng hóa' from doiTac";
                 da = new SqlDataAdapter(query, connection);
                 da.Fill(dt);
+<<<<<<< HEAD
                 dgv.DataSource = dt;
+=======
+                MessageBox.Show("Them thanh cong doi tac !","Thong bao");
+>>>>>>> 20c528b7a2c348f824517555b3cf0165ee746e80
             }
 
 
@@ -96,6 +100,8 @@ namespace WindowsFormsAppNhom
             
             dt.Rows.Clear();
             da.Fill(dt);
+            MessageBox.Show("Xoa thanh cong doi tac!","Thong bao");
+
 
 
 
@@ -115,6 +121,7 @@ namespace WindowsFormsAppNhom
             dt.Load(dr);
             da.Fill(dt);
             dgv.DataSource = dt;
+            MessageBox.Show("Sửa thành công đối tác !","Thong bao");
         }
 
        

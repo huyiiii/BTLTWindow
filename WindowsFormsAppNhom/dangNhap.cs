@@ -26,7 +26,7 @@ namespace WindowsFormsAppNhom
             InitializeComponent();
         }
         //tại chuỗi kệt nối với sql server
-        string connectionString = "Data Source=ADMIN\\QUOCHUY;Initial Catalog=quanlybandtdd; Integrated Security=True";
+        string connectionString = "DESKTOP-D1DV4KN\\SQLEXPRESS;Initial Catalog=quanlybandtdd; Integrated Security=True";
         SqlConnection connection = null;
 
         //băm mật khẩu

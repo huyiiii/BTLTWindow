@@ -13,7 +13,11 @@ namespace WindowsFormsAppNhom
 {
     public partial class banSp : Form
     {
+<<<<<<< HEAD
         string chuoiketnoi = "Data Source=ADMIN\\QUOCHUY;"
+=======
+        string chuoiketnoi = "Data Source=DESKTOP-RKR0FIM\\SQLEXPRESS;"
+>>>>>>> 20c528b7a2c348f824517555b3cf0165ee746e80
         + "Initial Catalog=quanlybandtdd; "
         + "Integrated Security=True";
         SqlConnection conn = null;

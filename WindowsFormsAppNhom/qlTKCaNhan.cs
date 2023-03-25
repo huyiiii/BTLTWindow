@@ -17,7 +17,7 @@ namespace WindowsFormsAppNhom
         {
             InitializeComponent();
         }
-        string connectionString = "Data Source=ADMIN\\QUOCHUY; Initial Catalog = quanlybandtdd; Integrated Security=True";
+        string connectionString = "DESKTOP-D1DV4KN\\SQLEXPRESS; Initial Catalog = quanlybandtdd; Integrated Security=True";
         SqlConnection connection = null;
         private void cbTKHienMK_CheckedChanged(object sender, EventArgs e)
         {
