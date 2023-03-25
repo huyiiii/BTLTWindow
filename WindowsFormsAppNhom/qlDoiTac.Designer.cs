@@ -117,6 +117,7 @@ namespace WindowsFormsAppNhom
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -127,14 +128,16 @@ namespace WindowsFormsAppNhom
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dgv);
-            this.splitContainer1.Size = new System.Drawing.Size(1169, 450);
-            this.splitContainer1.SplitterDistance = 182;
+            this.splitContainer1.Size = new System.Drawing.Size(877, 366);
+            this.splitContainer1.SplitterDistance = 148;
+            this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 0;
             // 
             // splitContainer2
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.splitContainer2.Name = "splitContainer2";
             // 
             // splitContainer2.Panel1
@@ -157,25 +160,28 @@ namespace WindowsFormsAppNhom
             this.splitContainer2.Panel2.Controls.Add(this.tbtensp);
             this.splitContainer2.Panel2.Controls.Add(this.label3);
             this.splitContainer2.Panel2.Controls.Add(this.label4);
-            this.splitContainer2.Size = new System.Drawing.Size(1169, 182);
-            this.splitContainer2.SplitterDistance = 585;
+            this.splitContainer2.Size = new System.Drawing.Size(877, 148);
+            this.splitContainer2.SplitterDistance = 438;
+            this.splitContainer2.SplitterWidth = 3;
             this.splitContainer2.TabIndex = 0;
             // 
             // tbtendt
             // 
-            this.tbtendt.Location = new System.Drawing.Point(106, 63);
+            this.tbtendt.Location = new System.Drawing.Point(80, 51);
+            this.tbtendt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbtendt.Name = "tbtendt";
             this.tbtendt.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tbtendt.Size = new System.Drawing.Size(467, 22);
+            this.tbtendt.Size = new System.Drawing.Size(351, 20);
             this.tbtendt.TabIndex = 2;
             // 
             // btThem
             // 
             this.btThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btThem.ForeColor = System.Drawing.Color.Black;
-            this.btThem.Location = new System.Drawing.Point(89, 117);
+            this.btThem.Location = new System.Drawing.Point(67, 95);
+            this.btThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btThem.Name = "btThem";
-            this.btThem.Size = new System.Drawing.Size(75, 45);
+            this.btThem.Size = new System.Drawing.Size(56, 37);
             this.btThem.TabIndex = 6;
             this.btThem.Text = "Thêm";
             this.btThem.UseVisualStyleBackColor = false;
@@ -184,9 +190,10 @@ namespace WindowsFormsAppNhom
             // btSua
             // 
             this.btSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btSua.Location = new System.Drawing.Point(287, 117);
+            this.btSua.Location = new System.Drawing.Point(215, 95);
+            this.btSua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btSua.Name = "btSua";
-            this.btSua.Size = new System.Drawing.Size(75, 45);
+            this.btSua.Size = new System.Drawing.Size(56, 37);
             this.btSua.TabIndex = 7;
             this.btSua.Text = "Sửa ";
             this.btSua.UseVisualStyleBackColor = false;
@@ -194,10 +201,11 @@ namespace WindowsFormsAppNhom
             // 
             // tbmadt
             // 
-            this.tbmadt.Location = new System.Drawing.Point(106, 22);
+            this.tbmadt.Location = new System.Drawing.Point(80, 18);
+            this.tbmadt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbmadt.Name = "tbmadt";
             this.tbmadt.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tbmadt.Size = new System.Drawing.Size(467, 22);
+            this.tbmadt.Size = new System.Drawing.Size(351, 20);
             this.tbmadt.TabIndex = 1;
             // 
             // label2
@@ -205,9 +213,10 @@ namespace WindowsFormsAppNhom
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 63);
+            this.label2.Location = new System.Drawing.Point(8, 51);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 16);
+            this.label2.Size = new System.Drawing.Size(65, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tên đối tác ";
             // 
@@ -216,17 +225,19 @@ namespace WindowsFormsAppNhom
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 25);
+            this.label1.Location = new System.Drawing.Point(8, 20);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 16);
+            this.label1.Size = new System.Drawing.Size(61, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã đối tác ";
             // 
             // btThoat
             // 
-            this.btThoat.Location = new System.Drawing.Point(348, 117);
+            this.btThoat.Location = new System.Drawing.Point(261, 95);
+            this.btThoat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btThoat.Name = "btThoat";
-            this.btThoat.Size = new System.Drawing.Size(75, 45);
+            this.btThoat.Size = new System.Drawing.Size(56, 37);
             this.btThoat.TabIndex = 9;
             this.btThoat.Text = "Thoát";
             this.btThoat.UseVisualStyleBackColor = true;
@@ -235,9 +246,10 @@ namespace WindowsFormsAppNhom
             // btXoa
             // 
             this.btXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btXoa.Location = new System.Drawing.Point(68, 117);
+            this.btXoa.Location = new System.Drawing.Point(51, 95);
+            this.btXoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btXoa.Name = "btXoa";
-            this.btXoa.Size = new System.Drawing.Size(75, 45);
+            this.btXoa.Size = new System.Drawing.Size(56, 37);
             this.btXoa.TabIndex = 8;
             this.btXoa.Text = "Xóa ";
             this.btXoa.UseVisualStyleBackColor = false;
@@ -245,16 +257,18 @@ namespace WindowsFormsAppNhom
             // 
             // tbmasp
             // 
-            this.tbmasp.Location = new System.Drawing.Point(128, 25);
+            this.tbmasp.Location = new System.Drawing.Point(96, 20);
+            this.tbmasp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbmasp.Name = "tbmasp";
-            this.tbmasp.Size = new System.Drawing.Size(409, 22);
+            this.tbmasp.Size = new System.Drawing.Size(308, 20);
             this.tbmasp.TabIndex = 3;
             // 
             // tbtensp
             // 
-            this.tbtensp.Location = new System.Drawing.Point(128, 74);
+            this.tbtensp.Location = new System.Drawing.Point(96, 60);
+            this.tbtensp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbtensp.Name = "tbtensp";
-            this.tbtensp.Size = new System.Drawing.Size(409, 22);
+            this.tbtensp.Size = new System.Drawing.Size(308, 20);
             this.tbtensp.TabIndex = 4;
             // 
             // label3
@@ -262,9 +276,10 @@ namespace WindowsFormsAppNhom
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 25);
+            this.label3.Location = new System.Drawing.Point(20, 20);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 16);
+            this.label3.Size = new System.Drawing.Size(73, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "Mã hàng hóa ";
             // 
@@ -273,9 +288,10 @@ namespace WindowsFormsAppNhom
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(26, 77);
+            this.label4.Location = new System.Drawing.Point(20, 63);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 16);
+            this.label4.Size = new System.Drawing.Size(74, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Tên hàng hóa";
             // 
@@ -287,19 +303,22 @@ namespace WindowsFormsAppNhom
             this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Location = new System.Drawing.Point(0, 0);
+            this.dgv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgv.Name = "dgv";
             this.dgv.RowHeadersWidth = 51;
             this.dgv.RowTemplate.Height = 24;
-            this.dgv.Size = new System.Drawing.Size(1168, 262);
+            this.dgv.Size = new System.Drawing.Size(876, 214);
             this.dgv.TabIndex = 9;
+            this.dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellClick);
             // 
             // qlDoiTac
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1169, 450);
+            this.ClientSize = new System.Drawing.Size(877, 366);
             this.Controls.Add(this.splitContainer1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "qlDoiTac";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.qlDoiTac_Load);

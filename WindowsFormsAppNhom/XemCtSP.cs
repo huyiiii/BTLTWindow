@@ -34,10 +34,13 @@ namespace WindowsFormsAppNhom
 
         private void button1_Click(object sender, EventArgs e)
         {
-            muaSanPham mua = new muaSanPham();
-            mua.ShowDialog();
-            XemCtSP xemCtSP = new XemCtSP();
-            xemCtSP.Close();
+            if(dangNhap.TenDN == " ")
+            {
+
+                dangNhap dn = new dangNhap();
+                dn.ShowDialog();
+            }
+
         }
     }
 }

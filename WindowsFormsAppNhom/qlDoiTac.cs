@@ -11,6 +11,7 @@ using System.Security.Policy;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Collections;
 
 namespace WindowsFormsAppNhom
 {
@@ -53,23 +54,23 @@ namespace WindowsFormsAppNhom
                 Application.Exit();
             }
         }
-      
+
         private void btThem_Click(object sender, EventArgs e)
         {
 
-            sql = "insert into doiTac values (@maDT, @tenDT, @maHH, @tensp)";
             if (tbmadt.Text.Length == 0 || tbmasp.Text.Length == 0 || tbtendt.Text.Length == 0 || tbtensp.Text.Length == 0)
                 MessageBox.Show("Hãy nhập dữ liệu");
             else
             {
+                sql = "insert into doiTac values (" + tbmadt.Text + "," + tbmasp.Text + ", '" + tbtendt.Text + "' , '" + tbtensp.Text + "' ," + "' '" + ");";
                 cmd = new SqlCommand(sql, connection);
-                cmd.Parameters.AddWithValue("@maDT", tbmadt.Text);
-                cmd.Parameters.AddWithValue("@tenDT", tbtendt.Text);
-                cmd.Parameters.AddWithValue("@maHH", tbmasp.Text);
-                cmd.Parameters.AddWithValue("@tensp", tbtensp.Text);
+                Console.WriteLine(sql);
                 cmd.ExecuteNonQuery();
                 dt.Rows.Clear();
+                string query = "select maDT as 'Mã đối tác', tenDT as 'Tên đối tác', maHH as 'Mã hàng hóa', tensp as 'Tên hàng hóa' from doiTac";
+                da = new SqlDataAdapter(query, connection);
                 da.Fill(dt);
+                dgv.DataSource = dt;
             }
 
 
@@ -79,16 +80,17 @@ namespace WindowsFormsAppNhom
         {
             DataGridViewRow row = new DataGridViewRow();
             ddc = e.RowIndex;
-            tbmadt.Text = Convert.ToString(row.Cells["Mã đối tác "].Value);
-            tbtendt.Text = Convert.ToString(row.Cells["Tên đối tác "].Value);
-            tbmasp.Text = Convert.ToString(row.Cells["Mã hàng hóa  "].Value);
-            tbtensp.Text = Convert.ToString(row.Cells["Tên hàng hóa "].Value);
+            tbmadt.Text = dgv.Rows[ddc].Cells[0].Value.ToString();
+            tbtendt.Text = dgv.Rows[ddc].Cells[1].Value.ToString();
+            tbmasp.Text = dgv.Rows[ddc].Cells[2].Value.ToString();
+            tbtensp.Text = dgv.Rows[ddc].Cells[3].Value.ToString();
         }
 
         private void btXoa_Click(object sender, EventArgs e) {
-            string a = dt.Rows[ddc][0].ToString();
-        
-            string xoa = "delete from doiTac where maDT = '" + a + "'";
+            
+            string a = dt.Rows[ddc][2].ToString();
+            
+            string xoa = "delete from doiTac where maHH = '" + a + "'";
             cmd = new SqlCommand(xoa, connection);
             cmd.ExecuteNonQuery();
             
@@ -100,7 +102,7 @@ namespace WindowsFormsAppNhom
         }
         private void btSua_Click(object sender, EventArgs e)
         {
-            sql = "update doiTac set maDT=@maDT, tenDT=@tenDT, maHH=@maHH,tensp=@tensp where maDT=@maDT";
+            sql = "update doiTac set maDT=@maDT, tenDT=@tenDT, maHH=@maHH,tensp=@tensp where maHH=@maHH";
 
             cmd = new SqlCommand(sql, connection);
             cmd.Parameters.AddWithValue("@maDT", tbmadt.Text);
